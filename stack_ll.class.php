@@ -11,7 +11,7 @@ namespace StackParse;
 */
 class StackParse
 {
-	/**
+     /**
      * @const char
      */
     const OPEN_BRACKETS = '{';
@@ -21,17 +21,17 @@ class StackParse
      */
     const CLOSE_BRACKETS = '}';
 
-	/**
+     /**
      * @var array[]
      */
 	private $errorLines;
 
-	/**
+     /**
      * @var \SplStack
      */
 	private $stack;
 
-	/**
+     /**
      * @var integer
      */
 	private $count;
@@ -46,9 +46,9 @@ class StackParse
     /**
      * manipulation with stack
      * @see    \SplStack
-     * @param  char $char 			must be character of brackets
-     * @param  int $lineNumber 		current line
-     * @return int 					if stack is empty return 1, else 0
+     * @param  char $char       must be character of brackets
+     * @param  int $lineNumber  current line
+     * @return int              if stack is empty return 1, else 0
      */
 	private function stackParse($char = '', $lineNumber = 0)
 	{
@@ -74,7 +74,7 @@ class StackParse
 		return 0;
 	}
 
-	/**
+     /**
      * check stack (in end)
      */
 	private function checkStack()
@@ -88,7 +88,7 @@ class StackParse
 		}
 	}
 
-	/**
+     /**
      * main function: parse the file and check stack (in end)
      * @param  string $fileName 	filename for parsing
      */
@@ -121,7 +121,7 @@ class StackParse
 		$this->checkStack();
 	}
 
-	/**
+     /**
      * display result
      * @return int 		number of errors
      */
